@@ -75,7 +75,7 @@ export default function AboutMe() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <motion.a
-            href="https://linkedin.com/in/your-username"
+            href="https://www.linkedin.com/in/palukurthi-bindu-sree-737697325/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition"
@@ -84,7 +84,7 @@ export default function AboutMe() {
             <FaLinkedin />
           </motion.a>
           <motion.a
-            href="https://github.com/your-username"
+            href="https://github.com/BinduSree-18"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition"

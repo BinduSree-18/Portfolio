@@ -28,7 +28,7 @@ export default function Me() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a
-            href="https://linkedin.com/in/your-username"
+            href="https://www.linkedin.com/in/palukurthi-bindu-sree-737697325/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition transform hover:scale-125"
@@ -36,7 +36,7 @@ export default function Me() {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/BinduSree-18"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition transform hover:scale-125"
