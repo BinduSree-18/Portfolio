@@ -127,7 +127,7 @@ export default function Skills() {
         className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-semibold rounded-lg px-10 py-4 shadow-lg hover:from-orange-600 hover:to-yellow-500 transition"
         aria-label="Toggle skill proficiency display"
       >
-        {showProgress ? "Show Skill Icons" : "Show My Proficiency"}
+        {showProgress ? "Show Skill Icons" : "Show Proficiency Levels"}
       </button>
     </section>
   );

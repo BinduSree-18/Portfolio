@@ -1,5 +1,8 @@
 import React from "react";
-
+import Edu from "../assets/Edu.png"
+import Alumni from "../assets/Alumni.png"
+import Martex from "../assets/Martex.png"
+import Teckzite from "../assets/Teckzite.png"
 const projects = [
   {
     title: "EDU100",
@@ -7,6 +10,7 @@ const projects = [
       "A sleek personal site showcasing my development skills, project portfolio, and resume downloads.",
     tech: "React, Tailwind CSS",
     link: "https://gregarious-beijinho-e227f8.netlify.app/",
+    image: Edu, // Replace with actual screenshot URL
   },
   {
     title: "Alumni",
@@ -14,20 +18,23 @@ const projects = [
       "An interactive quiz platform with real-time scores, countdown timer, and a powerful admin dashboard.",
     tech: "React, Node.js, MongoDB",
     link: "https://alumni-repo.vercel.app/",
+    image: Alumni,
   },
   {
     title: "Martex",
     description:
       "A secure web-based voting platform with login validation, admin control, and real-time vote counting.",
-    tech: "React,Tailwind CSS",
+    tech: "React, Tailwind CSS",
     link: "https://martex-clone.vercel.app/",
+    image:Martex,
   },
   {
     title: "Teckzite",
     description:
       "An interactive quiz platform with real-time scores, countdown timer, and a powerful admin dashboard.",
-    tech: "React,Tailwind CSS",
-    link: "teckzite.org",
+    tech: "React, Tailwind CSS",
+    link: "https://teckzite.org",
+    image: Teckzite,
   },
 ];
 
@@ -70,20 +77,19 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-orange-400 mb-4 tracking-wide">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="rounded-lg mb-4 hover:opacity-90 transition-opacity duration-300"
+                  />
+                </a>
+                <p className="text-sm text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                <p className="text-xs text-gray-500 italic mb-4">
+                <p className="text-xs text-gray-500 italic">
                   Tech: {project.tech}
                 </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 text-sm font-medium text-black bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full shadow-md hover:scale-105 transition-transform"
-                >
-                  Visit Site
-                </a>
               </div>
             </div>
           ))}

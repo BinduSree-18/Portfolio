@@ -43,14 +43,7 @@ export default function Me() {
           >
             <FaGithub />
           </a>
-          <a
-            href="https://twitter.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-orange-500 transition transform hover:scale-125"
-          >
-            <FaTwitter />
-          </a>
+          
         </motion.div>
 
         <motion.form

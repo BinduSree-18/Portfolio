@@ -1,23 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function AboutMe() {
-  const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Tailwind CSS",
-    "Git",
-    "REST APIs",
-  ];
-
   return (
-    <div id="about" className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white px-6 py-16 flex items-center justify-center relative overflow-hidden">
-      
-      {/* Background Glow Circle */}
+    <div
+      id="about"
+      className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white px-6 py-20 flex items-center justify-center relative overflow-hidden"
+    >
+      {/* Glow Effect */}
       <div className="absolute top-1/4 left-1/2 w-[400px] h-[400px] bg-orange-500 rounded-full opacity-20 blur-3xl transform -translate-x-1/2 -z-10"></div>
 
       <motion.div
@@ -26,60 +17,51 @@ export default function AboutMe() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        {/* Heading */}
         <motion.h2
-          className="text-4xl font-bold text-orange-500 mb-4 text-center"
+          className="text-4xl font-bold text-orange-500 mb-6 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
         >
           About Me
         </motion.h2>
 
+        {/* Description */}
         <motion.p
-          className="text-gray-300 text-lg mb-10 text-center max-w-2xl mx-auto"
+          className="text-gray-300 text-lg leading-relaxed text-center mb-8"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          I'm a passionate Full Stack Developer who thrives on building dynamic, responsive web applications. I love exploring new tools, optimizing performance, and delivering clean, maintainable code.
+          Hello! I'm <span className="text-orange-400 font-semibold">Bindu Sree</span>, a passionate
+          Full Stack Developer who transforms ideas into impactful digital experiences.
+          I help businesses and startups build fast, secure, and scalable websites and
+          web apps tailored to their needs.
+          <br /><br />
+          Whether you're looking to launch a product, redesign your existing site, or
+          automate a business process — I bring your vision to life with clean code,
+          attention to detail, and a focus on results. I believe in clear communication,
+          reliable delivery, and long-term value.
         </motion.p>
 
-        <motion.div
-          className="mb-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-semibold text-orange-400 mb-5 text-center">
-            Skills
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.map((skill, i) => (
-              <motion.span
-                key={i}
-                className="px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-full text-sm cursor-pointer hover:bg-orange-500 hover:text-black transition shadow-md hover:shadow-orange-500/30"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
+        {/* Why Work With Me */}
+        
 
+        {/* Social Icons */}
         <motion.div
-          className="flex justify-center gap-8 mt-10 text-3xl"
+          className="flex justify-center gap-10 mt-12 text-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <motion.a
             href="https://www.linkedin.com/in/palukurthi-bindu-sree-737697325/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition"
-            whileHover={{ y: -5, scale: 1.1 }}
+            whileHover={{ y: -5 }}
+            title="LinkedIn"
           >
             <FaLinkedin />
           </motion.a>
@@ -88,19 +70,27 @@ export default function AboutMe() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-orange-500 transition"
-            whileHover={{ y: -5, scale: 1.1 }}
+            whileHover={{ y: -5 }}
+            title="GitHub"
           >
             <FaGithub />
           </motion.a>
-          <motion.a
-            href="https://twitter.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-orange-500 transition"
-            whileHover={{ y: -5, scale: 1.1 }}
+        </motion.div>
+
+        {/* Download CV Button */}
+        <motion.div
+          className="flex justify-center mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <a
+            href="/Resume1.pdf"
+            download="BinduSree-Resume.pdf"
+            className="px-6 py-3 bg-orange-500 text-black font-semibold rounded-full shadow-lg hover:bg-orange-600 transition duration-300 border border-orange-400 hover:shadow-orange-400/40"
           >
-            <FaTwitter />
-          </motion.a>
+            ⬇️ Download CV
+          </a>
         </motion.div>
       </motion.div>
     </div>

@@ -8,7 +8,7 @@ export default function Hero() {
 
       <div className="mx-auto py-20 text-center sm:text-left lg:mt-[80px]">
         <p className="text-orange-400 tracking-widest uppercase text-sm mb-3 font-semibold animate-pulse">
-          Creative Designer
+          Full Stack Developer
         </p>
 
         <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight text-white mb-6">
